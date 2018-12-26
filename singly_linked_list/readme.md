@@ -1,6 +1,15 @@
 # Singly Linked list  operations
 
 ### Implement api for singly linked list 
-- pushFront(key) 
-- topFront()
+- PushFront(Key) 
+- TopFront()
 
+
+## PushFront(key)
+```
+node <- new node
+node.key <- key
+head <- node
+if tail=nil:
+	tail<-head
+```

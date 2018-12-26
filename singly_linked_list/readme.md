@@ -1,6 +1,6 @@
-#Singly Linked list  operations
+# Singly Linked list  operations
 
-###Implement api for singly linked list 
--pushFront(key) 
--topFront()
+### Implement api for singly linked list 
+- pushFront(key) 
+- topFront()
 

@@ -13,6 +13,7 @@ head <- node
 if tail=nil:
 	tail<-head
 ```
+### Running Time
 
 > O(n): 1
 

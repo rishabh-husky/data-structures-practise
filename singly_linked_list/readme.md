@@ -9,6 +9,7 @@
 ```
 node <- new node
 node.key <- key
+node.next <- head
 head <- node
 if tail=nil:
 	tail<-head

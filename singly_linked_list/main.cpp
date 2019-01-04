@@ -8,8 +8,6 @@ struct node * createNode(int);
 
 void pushFront(int, struct node **, struct node **);
 
-void printList(struct node * , struct node *);
-
 int main()
 {
 	struct node * head = nullptr;

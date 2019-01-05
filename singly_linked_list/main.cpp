@@ -11,16 +11,16 @@ void pushFront(int, struct node **, struct node **);
 int main()
 {
 	struct node * head = nullptr;
-	
+
 	struct node * tail = nullptr;
-		
-	pushFront(10,&head,&tail);
+
+	pushFront(10, &head, &tail);
 
 	pushFront(20, &head, &tail);
 
 
 	return 0;
-	
+
 }
 
 

@@ -1,8 +1,8 @@
 # Singly Linked list  operations
 
 ### Implement api for singly linked list 
-- [PushFront(Key)] (#pushfrontkey)
-- TopFront()
+- [PushFront(Key)](#pushfrontkey)
+- [Key TopFront()](#key-topfront)
 - PopFront()
 
 

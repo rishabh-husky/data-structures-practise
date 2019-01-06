@@ -21,7 +21,7 @@ if tail=nil:
 
 ## Key TopFront()
 ```
-if head=nil
+if head=nil:
 	return NIL
 return head->key
 ```

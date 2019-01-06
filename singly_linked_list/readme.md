@@ -1,7 +1,7 @@
 # Singly Linked list  operations
 
 ### Implement api for singly linked list 
-- PushFront(Key) 
+- PushFront(Key) [#pushfrontkey]
 - TopFront()
 - PopFront()
 
@@ -19,7 +19,7 @@ if tail=nil:
 
 > O(n): 1
 
-## Key TopFron()
+## Key TopFront()
 ```
 if head=nil
 	return NIL

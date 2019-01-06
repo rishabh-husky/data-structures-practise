@@ -2,8 +2,37 @@
 
 ### Implement api for singly linked list 
 - [PushFront(Key)](#pushfrontkey)
+add to front 
+
 - [Key TopFront()](#key-topfront)
+return front item
+
 - PopFront()
+remove front item
+
+- PushBack()
+add to  back
+
+- Key TopBack()
+reutrn back item
+
+- PopBack()
+remove back item
+
+- Boolean Find(key)
+is key in list
+
+- Erase(key)
+remove key from the list
+
+- Boolean Empty()
+is list empty
+
+- AddBefore(Node,key)
+adds key before node
+
+- AddAfter(Node,key)
+adds key after node
 
 
 ## PushFront(key)

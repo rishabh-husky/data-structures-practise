@@ -1,12 +1,22 @@
 #include <iostream>
-#include "datatypes.h"
 #include <stdlib.h>
 
 using namespace std;
 
+struct node
+{
+	int key;
+
+	struct node * next;
+};
+
 struct node * createNode(int);
 
 void pushFront(int, struct node **, struct node **);
+
+int TopFront(struct node *);
+
+void freeList(struct node *, struct node *);
 
 int main()
 {
@@ -14,10 +24,19 @@ int main()
 
 	struct node * tail = nullptr;
 
+	int key{};
+
+	key = TopFront(head);
+
 	pushFront(10, &head, &tail);
+
+	key = TopFront(head);
 
 	pushFront(20, &head, &tail);
 
+	key=TopFront(head);
+
+	freeList(head, tail);
 
 	return 0;
 
@@ -51,3 +70,31 @@ struct node * createNode(int key)
 	return newnode;
 }
 
+int TopFront(struct node * head)
+{
+	if (head == nullptr)
+		return NULL;
+
+	return head->key;
+}
+
+void freeList(struct node * head, struct node * tail)
+{
+	struct node * current, * next;
+
+	current = head;
+
+	while(current!=tail)
+	{
+		next = current->next;
+
+		free(current);
+
+		current = next;
+	}
+
+	if (tail != nullptr) //when tail points to non-null node 
+	{
+		free(tail);
+	}
+}

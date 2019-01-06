@@ -3,6 +3,7 @@
 ### Implement api for singly linked list 
 - PushFront(Key) 
 - TopFront()
+- PopFront()
 
 
 ## PushFront(key)
@@ -18,3 +19,12 @@ if tail=nil:
 
 > O(n): 1
 
+## Key TopFron()
+```
+if head=nil
+	return NIL
+return head->key
+```
+
+###Running Time
+> O(n): 1

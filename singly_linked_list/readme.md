@@ -42,7 +42,7 @@ node.key <- key
 node.next <- head
 head <- node
 if tail=nil:
-	tail<-head
+	tail <- head
 ```
 ### Running Time
 
@@ -57,3 +57,13 @@ return head->key
 
 ### Running Time
 > O(n): 1
+
+
+## PopFront()
+```
+if head=nil:
+	ERROR: empty list 
+head <- head.next;
+if head=nill:
+	tail <- nil;
+```

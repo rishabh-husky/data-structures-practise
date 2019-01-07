@@ -10,7 +10,7 @@ return front item
 - [PopFront()](#popfront)
 remove front item
 
-- [PushBack()](#pushback)
+- [PushBack(key)](#pushbackkey)
 add to  back
 
 - Key TopBack()

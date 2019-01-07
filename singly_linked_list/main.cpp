@@ -14,9 +14,12 @@ struct node * createNode(int);
 
 void pushFront(int, struct node **, struct node **);
 
-int TopFront(struct node *);
+int topFront(struct node *);
+
+void popFront(struct node **, struct node **);
 
 void freeList(struct node *, struct node *);
+
 
 int main()
 {
@@ -26,17 +29,21 @@ int main()
 
 	int key{};
 
-	key = TopFront(head);
+	key = topFront(head);
 
 	pushFront(10, &head, &tail);
 
-	key = TopFront(head);
+	key = topFront(head);
 
 	pushFront(20, &head, &tail);
 
-	key=TopFront(head);
+	key = topFront(head);
 
-	freeList(head, tail);
+	popFront(&head,&tail);
+
+	key = topFront(head);
+
+	freeList(head, tail); //free list at the end of execution
 
 	return 0;
 
@@ -70,13 +77,34 @@ struct node * createNode(int key)
 	return newnode;
 }
 
-int TopFront(struct node * head)
+int topFront(struct node * head)
 {
 	if (head == nullptr)
 		return NULL;
 
 	return head->key;
 }
+
+
+void popFront(struct node ** head,struct node ** tail)
+{
+	struct node * node;
+
+	if(*head==nullptr)
+	{
+		cout << "Empty list" << endl;
+	}
+
+	node = *head;
+	
+	*head = (*head)->next;
+	
+	if (*head == nullptr)
+		*tail = nullptr;
+
+	free(node);
+}
+
 
 void freeList(struct node * head, struct node * tail)
 {

@@ -7,7 +7,7 @@ add to front
 - [Key TopFront()](#key-topfront)
 return front item
 
-- PopFront()
+- [PopFront()](#popfront)
 remove front item
 
 - PushBack()

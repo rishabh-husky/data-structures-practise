@@ -10,7 +10,7 @@ return front item
 - [PopFront()](#popfront)
 remove front item
 
-- PushBack()
+- [PushBack()](#pushback)
 add to  back
 
 - Key TopBack()
@@ -83,5 +83,5 @@ else:
 	tail <- node
 ```
 
-# Running time
+### Running time
 O(n): 1

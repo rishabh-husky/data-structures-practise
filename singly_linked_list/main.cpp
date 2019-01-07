@@ -20,6 +20,8 @@ void popFront(struct node **, struct node **);
 
 void pushBack(int,struct node **,struct node **);
 
+int topBack(struct node *);
+
 void freeList(struct node *, struct node *);
 
 int main()
@@ -124,6 +126,14 @@ void pushBack(int key, struct node ** head, struct node ** tail)
 		(*tail)->next = newnode;
 		*tail = newnode;
 	}	
+}
+
+int topBack(struct node * tail)
+{
+	if (tail == nullptr)
+		cout << "Empty list";
+	else
+		return tail->key;
 }
 
 void freeList(struct node * head, struct node * tail)

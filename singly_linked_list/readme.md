@@ -13,7 +13,7 @@ remove front item
 - [PushBack(key)](#pushbackkey)
 add to  back
 
-- Key TopBack()
+- [Key TopBack()](#key-topback)
 return back item
 
 - PopBack()
@@ -81,6 +81,18 @@ if tail = nil:
 else:
 	tail.next <- node
 	tail <- node
+```
+
+### Running time
+O(n): 1
+
+
+## Key TopBack()
+```
+if tail=nil:
+	ERROR: empty list
+else
+	tail->key
 ```
 
 ### Running time

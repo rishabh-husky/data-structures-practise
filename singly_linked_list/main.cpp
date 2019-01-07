@@ -22,6 +22,8 @@ void pushBack(int,struct node **,struct node **);
 
 int topBack(struct node *);
 
+void popBack(struct node **, struct node **);
+
 void freeList(struct node *, struct node *);
 
 int main()
@@ -51,6 +53,12 @@ int main()
 	pushBack(40, &head, &tail);
 
 	key = topFront(head);
+
+	key = topBack(tail);
+
+	popBack(&head,&tail);
+
+	key = topBack(tail);
 
 	freeList(head, tail); //free list at the end of execution
 
@@ -134,6 +142,45 @@ int topBack(struct node * tail)
 		cout << "Empty list";
 	else
 		return tail->key;
+}
+
+void popBack(struct node **head,struct node **tail)
+{
+	struct node * node;
+
+	if(*tail==nullptr)
+	{
+		cout << "Empty List" <<endl;
+	}
+	else 
+	{
+		if(*head==*tail)
+		{
+			free(*head);
+
+			*head = *tail = nullptr;
+		}
+		else
+		{
+			node = *head;
+
+			/** find second last node **/
+			while(node->next->next!=nullptr)
+			{
+				node = node->next;
+			}
+			
+			/** update pointer to null**/
+			free(node->next);
+			
+			node->next = nullptr;
+
+			*tail=node;
+
+		}
+
+
+	} 
 }
 
 void freeList(struct node * head, struct node * tail)

@@ -16,7 +16,7 @@ add to  back
 - [Key TopBack()](#key-topback)
 return back item
 
-- PopBack()
+- [PopBack()](#popback)
 remove back item
 
 - Boolean Find(key)
@@ -63,9 +63,9 @@ return head->key
 ```
 if head = nil:
 	ERROR: empty list 
-head <- head.next;
+head <- head.next
 if head = nil:
-	tail <- nil;
+	tail <- nil
 ```
 
 ### Running Time
@@ -84,16 +84,33 @@ else:
 ```
 
 ### Running time
-O(n): 1
+> O(n): 1
 
 
 ## Key TopBack()
 ```
-if tail=nil:
+if tail = nil:
 	ERROR: empty list
 else
 	tail->key
 ```
 
 ### Running time
-O(n): 1
+> O(n): 1
+
+## PopBack()
+```
+if head = nil:
+	ERROR: empty list
+if head = tail:
+	head <- tail <- nil
+else
+	p <- head
+	while p.next.next != nil
+		p <- p.next
+	p.next <- nill
+	tail <-p
+```
+
+### Running Time
+> O(n)

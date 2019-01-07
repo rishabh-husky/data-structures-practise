@@ -67,3 +67,5 @@ head <- head.next;
 if head = nill:
 	tail <- nil;
 ```
+### Running Time
+> O(n): 1

@@ -91,7 +91,7 @@ else:
 ```
 if tail = nil:
 	ERROR: empty list
-else
+else:
 	tail->key
 ```
 
@@ -104,13 +104,75 @@ if head = nil:
 	ERROR: empty list
 if head = tail:
 	head <- tail <- nil
-else
+else:
 	p <- head
 	while p.next.next != nil
 		p <- p.next
-	p.next <- nill
+	p.next <- nil
 	tail <-p
 ```
 
 ### Running Time
-> O(n)
+> O(n): n
+
+
+## Boolean Find(key)
+```
+if head = nil:
+	ERROR: empty list
+p <- head
+while p != tail
+	if p.key=key:
+		return true
+	p=p.next
+if tail.key=key:
+	return true
+return false
+```
+
+### Running Time
+> O(n): n
+
+## Erase(key)
+```
+if head = nil:
+	ERROR: empty list
+
+if head=tail AND head.key=key:
+		head <- tail <- nil
+else:
+	current <- head
+	while current != nil
+		if current.key=key:
+			prev <- current.next
+			prev.next <- current.next.next
+			free(current)
+	prev <- current
+	current <- current.next
+```
+
+### Running Time
+> O(n):n
+
+## Boolean Empty()
+```
+if tail = nil
+	return true
+return false
+```
+
+### Running Time
+> O(n):n
+
+## AddAfter(node,key)
+```
+node2 <- new node
+node2.key <- key
+node2.next <- node
+node.next <- node2
+if tail = node
+	tail <- node2
+```
+
+### Running Time()
+> O(n) : 1

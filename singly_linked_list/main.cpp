@@ -1,4 +1,4 @@
-#include <iostream>
+ #include <iostream>
 #include <stdlib.h>
 
 using namespace std;
@@ -24,6 +24,10 @@ int topBack(struct node *);
 
 void popBack(struct node **, struct node **);
 
+bool find(int,struct node *, struct node *);
+
+void erase(int, struct node **, struct node **);
+
 void freeList(struct node *, struct node *);
 
 int main()
@@ -34,6 +38,8 @@ int main()
 
 	int key{};
 
+	find(30, head, tail);
+
 	key = topFront(head);
 
 	pushFront(10, &head, &tail);
@@ -41,6 +47,8 @@ int main()
 	key = topFront(head);
 
 	pushFront(20, &head, &tail);
+
+	erase(20, &head, &tail);
 
 	key = topFront(head);
 
@@ -59,6 +67,12 @@ int main()
 	popBack(&head,&tail);
 
 	key = topBack(tail);
+
+	find(30, head, tail);
+
+	find(300, head, tail);
+
+	
 
 	freeList(head, tail); //free list at the end of execution
 
@@ -138,10 +152,16 @@ void pushBack(int key, struct node ** head, struct node ** tail)
 
 int topBack(struct node * tail)
 {
-	if (tail == nullptr)
+	if (tail == nullptr) 
+	{
 		cout << "Empty list";
+		return NULL;
+	}
 	else
+	{
 		return tail->key;
+	}
+		
 }
 
 void popBack(struct node **head,struct node **tail)
@@ -181,6 +201,74 @@ void popBack(struct node **head,struct node **tail)
 
 
 	} 
+}
+
+bool find(int key,struct node * head, struct node * tail)
+{
+	struct node * p;
+
+
+	if(head==nullptr)
+	{
+		cout << "List is empty" << endl;
+
+		return NULL;
+	}
+
+	p = head;
+	
+	while(p!=tail)
+	{
+		if(p->key==key)
+			return true;
+
+		p = p->next;
+	}
+
+	if (tail->key == key)
+		return true;
+
+	return false;
+}
+
+void erase(int key, struct node ** head, struct node ** tail)
+{
+	struct node * current ,* prev;
+
+	if (*head == nullptr)
+	{
+		cout << "List is empty" << endl;
+	}
+
+	if(*head==*tail && (*head)->key==key)
+	{
+		free(*head);
+
+		*head = *tail = nullptr;
+		
+	} else {
+		
+		current = *head;
+
+		while(current !=nullptr)
+		{
+			if(current->key==key)
+			{
+				prev = current->next;
+
+				prev->next = current->next->next;
+
+				free(current);
+
+				break;
+			}
+
+			prev = current;
+			
+			current = current->next;
+			
+		}
+	}
 }
 
 void freeList(struct node * head, struct node * tail)

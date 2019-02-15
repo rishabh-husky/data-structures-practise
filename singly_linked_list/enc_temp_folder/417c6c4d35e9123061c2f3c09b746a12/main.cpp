@@ -72,6 +72,7 @@ int main()
 
 	find(300, head, tail);
 
+
 	freeList(head, tail); //free list at the end of execution
 
 	return 0;

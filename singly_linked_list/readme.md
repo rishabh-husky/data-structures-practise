@@ -19,10 +19,10 @@ return back item
 - [PopBack()](#popback)
 remove back item
 
-- Boolean Find(key)
+- [Boolean Find(key)](#Boolean-findkey)
 is key in list
 
-- Erase(key)
+- [Erase(key)](#erasekey)
 remove key from the list
 
 - Boolean Empty()
@@ -137,18 +137,21 @@ return false
 ```
 if head = nil:
 	ERROR: empty list
-
-if head=tail AND head.key=key:
+elseif head=tail AND head.key=key:
 		head <- tail <- nil
 else:
 	current <- head
-	while current != nil
+	while current != tail
 		if current.key=key:
 			prev <- current.next
 			prev.next <- current.next.next
 			free(current)
 	prev <- current
 	current <- current.next
+	if(tail.key=key):
+		free(tail);
+		tail=prev;
+
 ```
 
 ### Running Time

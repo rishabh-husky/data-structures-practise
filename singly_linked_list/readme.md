@@ -25,7 +25,7 @@ is key in list
 - [Erase(key)](#erasekey)
 remove key from the list
 
-- Boolean Empty()
+- [Boolean Empty()](#boolean-empty)
 is list empty
 
 - AddBefore(Node,key)

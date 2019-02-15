@@ -28,6 +28,10 @@ bool find(int,struct node *, struct node *);
 
 void erase(int, struct node **, struct node **);
 
+bool empty(struct node *);
+
+void AddAfter(struct node *, struct node *, struct node *);
+
 void freeList(struct node *, struct node *);
 
 int main()
@@ -39,6 +43,8 @@ int main()
 	int key{};
 
 	find(30, head, tail);
+
+	empty(tail);
 
 	key = topFront(head);
 
@@ -72,7 +78,9 @@ int main()
 
 	find(300, head, tail);
 
-	freeList(head, tail); //free list at the end of execution
+	empty(tail);
+
+	//freeList(head, tail); //free list at the end of execution
 
 	return 0;
 }
@@ -296,4 +304,15 @@ void freeList(struct node * head, struct node * tail)
 	{
 		free(tail);
 	}
+}
+
+
+bool empty(struct node* tail)
+{
+	return (tail == nullptr);
+}
+
+void AddAfter(struct node * after,struct node * head,struct node * tail)
+{
+
 }

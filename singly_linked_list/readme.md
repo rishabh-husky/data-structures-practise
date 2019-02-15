@@ -159,9 +159,7 @@ else:
 
 ## Boolean Empty()
 ```
-if tail = nil
-	return true
-return false
+return tail = nil
 ```
 
 ### Running Time

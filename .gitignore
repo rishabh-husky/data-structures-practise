@@ -57,3 +57,4 @@ dkms.conf
 *.vcxproj.user
 .vs
 Debug
+enc_temp_folder

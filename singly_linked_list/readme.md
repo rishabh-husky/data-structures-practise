@@ -28,7 +28,7 @@ remove key from the list
 - [Boolean Empty()](#boolean-empty)
 is list empty
 
-- AddBefore(Node,key)
+- [AddAfter(Node,key)](#addafternodekey)
 adds key before node
 
 - AddAfter(Node,key)
@@ -148,8 +148,9 @@ else:
 			free(current)
 	prev <- current
 	current <- current.next
-	if(tail.key=key):
-		free(tail);
+	if(current.key=key):
+		free(current);
+		prev.next <- nil
 		tail=prev;
 
 ```

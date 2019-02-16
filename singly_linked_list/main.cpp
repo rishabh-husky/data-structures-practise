@@ -30,7 +30,7 @@ void erase(int, struct node **, struct node **);
 
 bool empty(struct node *);
 
-void AddAfter(struct node *, struct node *, struct node *);
+void AddAfter( struct node *, int, struct node **);
 
 void freeList(struct node *, struct node *);
 
@@ -41,8 +41,6 @@ int main()
 	struct node * tail = nullptr;
 
 	int key{};
-
-	find(30, head, tail);
 
 	empty(tail);
 
@@ -76,10 +74,15 @@ int main()
 
 	erase(30, &head, &tail);
 
-	find(300, head, tail);
-
 	empty(tail);
 
+	AddAfter(head, 50 ,&tail);
+
+	AddAfter(tail, 60, &tail);
+
+	find(50, head, tail);
+
+	find(60, head, tail);
 	//freeList(head, tail); //free list at the end of execution
 
 	return 0;
@@ -275,9 +278,11 @@ void erase(int key, struct node ** head, struct node ** tail)
 			
 		}
 
-		if((*tail)->key==key)
+		if(current->key==key)
 		{
-			free(*tail);
+			free(current);
+
+			prev->next = nullptr;
 
 			*tail = prev;
 
@@ -312,7 +317,14 @@ bool empty(struct node* tail)
 	return (tail == nullptr);
 }
 
-void AddAfter(struct node * after,struct node * head,struct node * tail)
+void AddAfter(struct node * after, int key,struct node ** tail)
 {
+	struct node * newnode = createNode(key);
 
+	newnode->next = after->next;
+	
+	after->next = newnode;
+
+	if (*tail == after)
+		*tail = newnode;
 }

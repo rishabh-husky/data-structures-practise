@@ -1,4 +1,4 @@
- #include <iostream>
+#include <iostream>
 #include <stdlib.h>
 
 using namespace std;
@@ -29,6 +29,8 @@ bool find(int,struct node *, struct node *);
 void erase(int, struct node **, struct node **);
 
 bool empty(struct node *);
+
+void AddBefore(struct node *, int, struct node **);
 
 void AddAfter( struct node *, int, struct node **);
 
@@ -78,11 +80,15 @@ int main()
 
 	AddAfter(head, 50 ,&tail);
 
+	AddBefore(head->next, 90, &head);
+
 	AddAfter(tail, 60, &tail);
 
-	find(50, head, tail);
+	AddBefore(head, 70, &head);
 
-	find(60, head, tail);
+	AddBefore(tail, 80, &head);
+
+	
 	//freeList(head, tail); //free list at the end of execution
 
 	return 0;
@@ -290,13 +296,51 @@ void erase(int key, struct node ** head, struct node ** tail)
 	}
 }
 
+bool empty(struct node* tail)
+{
+	return (tail == nullptr);
+}
+
+void AddBefore(struct node * before, int key, struct node ** head)
+{
+	struct node * newnode = createNode(key);
+	struct node * current = nullptr;
+
+	if (*head == before){
+		newnode->next = *head;
+		*head = newnode;
+	}else {
+		current = *head;
+		while (current->next != nullptr){
+			if (current->next == before){
+				newnode->next = current->next;
+				current->next = newnode;
+				break;
+			}
+			current = current->next;
+		}
+	}
+}
+
+void AddAfter(struct node * after, int key, struct node ** tail)
+{
+	struct node * newnode = createNode(key);
+
+	newnode->next = after->next;
+
+	after->next = newnode;
+
+	if (*tail == after)
+		*tail = newnode;
+}
+
 void freeList(struct node * head, struct node * tail)
 {
-	struct node * current, * next;
+	struct node * current, *next;
 
 	current = head;
 
-	while(current!=tail)
+	while (current != tail)
 	{
 		next = current->next;
 
@@ -309,22 +353,4 @@ void freeList(struct node * head, struct node * tail)
 	{
 		free(tail);
 	}
-}
-
-
-bool empty(struct node* tail)
-{
-	return (tail == nullptr);
-}
-
-void AddAfter(struct node * after, int key,struct node ** tail)
-{
-	struct node * newnode = createNode(key);
-
-	newnode->next = after->next;
-	
-	after->next = newnode;
-
-	if (*tail == after)
-		*tail = newnode;
 }

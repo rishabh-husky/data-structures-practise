@@ -28,10 +28,10 @@ remove key from the list
 - [Boolean Empty()](#boolean-empty)
 is list empty
 
-- [AddAfter(Node,key)](#addafternodekey)
+- [AddBefore(Node,key)](#addbeforenodekey)
 adds key before node
 
-- AddAfter(Node,key)
+- [AddAfter(Node,key)](#addafternodekey)
 adds key after node
 
 
@@ -49,6 +49,7 @@ if tail = nil:
 
 > O(n): 1
 
+
 ## Key TopFront()
 ```
 if head = nil:
@@ -58,6 +59,7 @@ return head->key
 
 ### Running Time
 > O(n): 1
+
 
 ## PopFront()
 ```
@@ -70,6 +72,7 @@ if head = nil:
 
 ### Running Time
 > O(n): 1
+
 
 ## PushBack(key)
 ```
@@ -97,6 +100,7 @@ else:
 
 ### Running time
 > O(n): 1
+
 
 ## PopBack()
 ```
@@ -133,6 +137,7 @@ return false
 ### Running Time
 > O(n): n
 
+
 ## Erase(key)
 ```
 if head = nil:
@@ -158,13 +163,36 @@ else:
 ### Running Time
 > O(n):n
 
+
 ## Boolean Empty()
 ```
 return tail = nil
 ```
 
 ### Running Time
+> O(n):1
+
+
+## AddBefore(node,key)
+```
+node2 <- new node
+node2.key <- key
+if head = node:
+	node2.next <- head
+	head <- node2
+else:
+	p <- head
+	while p.next != nil
+		if p.next=node:
+			 node2.next <- p.next
+			 p.next <- node2
+			 break
+		p <- p.next
+```
+  
+### Running Time() 
 > O(n):n
+
 
 ## AddAfter(node,key)
 ```
@@ -177,4 +205,4 @@ if tail = node
 ```
 
 ### Running Time()
-> O(n) : 1
+> O(n):1

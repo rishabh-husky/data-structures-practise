@@ -6,27 +6,19 @@ Last in,First Out.
 
 ### Implement api for stack
 
-- Push(Key)
-
-add Key into collection
+- Push(Key) : add Key into collection
 
 > O(n):1
 
-- Key Top()
-
-returns most recently-added key
+- Key Top(): returns most recently-added key
 
 > O(n):1
 
-- Key Pop()
-
-removes and returns most recently-added key
+- Key Pop(): removes and returns most recently-added key
 
 > O(n):1
 
--[Boolean Empty()
-
-is collection empty
+- Boolean Empty(): check whether collection empty
 
 > O(n):1
 

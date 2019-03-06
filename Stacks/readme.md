@@ -1,7 +1,3 @@
-## a stack is LIFO
-
-Last in,First Out.
-
 # Stack  operations
 
 ### Implement api for stack
@@ -22,3 +18,7 @@ Last in,First Out.
 
 > O(n):1
 
+
+## Stack is LIFO
+
+Last in,First Out.

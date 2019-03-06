@@ -1,4 +1,4 @@
-## A stack is LIFO
+## a stack is LIFO
 
 Last in,First Out.
 

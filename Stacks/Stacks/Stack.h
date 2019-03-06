@@ -6,7 +6,7 @@ class Stack{
 	private:
 		int _current;
 		int _next;
-		char _elements[Stack::_size];
+		char _elements[_size];
 
 	public:
 		Stack():

@@ -4,7 +4,7 @@ Queue is a LIFO (List In First Out).
 
 ### Queue api Implementation using linked list  
 
-- [Enqueue(Key)](#enqueue-key)
+- [Enqueue(Key)](#enqueuekey)
 adds key to collection 
 
 - [Key Dequeue()](#key-dequeue)

@@ -33,7 +33,7 @@ else:
 > O(n): 1
 
 
-## Dequeue()
+## Key Dequeue()
 ```
 key <- head.key
 head <- head.next

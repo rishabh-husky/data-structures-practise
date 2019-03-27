@@ -20,4 +20,5 @@ int main()
 	newQueue.dequeue();
 
 	newQueue.isEmpty();
+
 }

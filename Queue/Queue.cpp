@@ -10,7 +10,21 @@ Queue::Queue()
 
 Queue::~Queue()
 {
+	struct node * currentnode,* nextnode;
+	
+	nextnode = currentnode = head;
 
+	while (nextnode != nullptr)
+	{
+		
+		nextnode = currentnode->next;
+		
+		free(currentnode);
+
+		currentnode = nextnode;
+	}
+
+	head = tail = nullptr;
 }
 
 struct node * Queue::createNode(int key)

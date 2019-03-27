@@ -20,7 +20,7 @@ newnode <- new node
 newnode.key <- key
 newnode.next <- nil
 
-if tail = head:
+if tail = nil:
 	head <- newnode 
 	tail <- newnode
 else:

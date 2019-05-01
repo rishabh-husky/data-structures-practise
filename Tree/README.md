@@ -2,7 +2,7 @@
 
 ### DepthFirst Search
 
-Travese one sub-tree before exploring a sibling subtree.
+Traverse one sub-tree before exploring a sibling subtree.
 
   - [InOrderTraversal(tree)](#inordertraversal-tree)
 

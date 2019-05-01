@@ -14,3 +14,7 @@ InOrderTraversal(tree.left)
 Print(tree.key)
 InOrderTraversal(tree.right)
 ```
+
+### Running Time
+
+> O(n): n

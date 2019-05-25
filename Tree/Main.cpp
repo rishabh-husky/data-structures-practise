@@ -1,21 +1,44 @@
 #include "DataTypes.h"
-#include "InOrderTraversal.h"
 #include "Tree.h"
 #include "InOrderTraversal.h"
+#include "PreOrderTraversal.h"
+#include <iostream>
 
 int main()
 {
 	Tree newtree;
 	
-	node * L1=newtree.appendToNode(10, &(newtree.root));
+	/** Binary Search Tree **/
+	
+	node* L1 = newtree.appendToNode(30, &(newtree.root));
 
-	node * L2=newtree.appendToNode(20, &(L1->left));
+	node* L11 = newtree.appendToNode(20, &(L1->left));
 
-	L2=newtree.appendToNode(30, &(L1->right));
+	node* L12 = newtree.appendToNode(60, &(L1->right));
+
+	node* L111 = newtree.appendToNode(10, &(L11->left));
+
+	node* L112 = newtree.appendToNode(25, &(L11->right));
+
+	node* L121 = newtree.appendToNode(50, &(L12->left));
+
+	node* L122 = newtree.appendToNode(70, &(L12->right));
+
+	node* L1111 = newtree.appendToNode(5, &(L111->left));
+
+	node* L1112 = newtree.appendToNode(12, &(L111->right));
 
 	InOrderTraversal newInOrderTraversal(newtree);
 	
+	cout << "In Order Traversal" << endl;
+
 	newInOrderTraversal.traverse();
+
+	cout << "Pre Order Traversal" << endl;
+
+	PreOrderTraversal preOrder(newtree);
+	
+	preOrder.traverse();
 
 	return 0;
 }

@@ -7,10 +7,28 @@ Tree::Tree()
 	lastNode = root;
 }
 
-Tree::~Tree()
+bool Tree::freeTree(node* node)
 {
+
+	return true;
 }
 
+
+Tree::~Tree()
+{
+	freeTree(root);
+}
+
+
+bool Tree::hasLeftLeaf(node * n)
+{
+	return (n->left != nullptr);
+}
+
+bool Tree::isRootNode(node * n)
+{
+	return (n == root);
+}
 
 node * Tree::appendToNode(int key,node * *appendTo)
 {

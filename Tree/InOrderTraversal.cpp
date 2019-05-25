@@ -5,13 +5,11 @@ using namespace std;
 InOrderTraversal::InOrderTraversal(Tree tree) 
 {
 	t = tree;
-
-	next = nullptr;
 }
 
 InOrderTraversal::~InOrderTraversal()
 {
-
+	
 }
 
 bool InOrderTraversal::walk(node * node)

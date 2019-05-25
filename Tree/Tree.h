@@ -14,6 +14,12 @@ public:
 
 private:
 	node * lastNode;
+	
+	bool freeTree(node *);
 
 	node * createNode(int);
+
+	bool hasLeftLeaf(node*);
+
+	bool isRootNode(node *);
 };

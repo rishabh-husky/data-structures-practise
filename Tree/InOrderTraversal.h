@@ -13,8 +13,6 @@ public:
 
 	~InOrderTraversal();
 private:
-
-	node * next;
 	
 	Tree t;
 

@@ -5,7 +5,7 @@
 Traverse one sub-tree before exploring a sibling subtree.
  
   - [InOrderTraversal(tree)](#inordertraversaltree)
-  - [PreOrderTraversal(tree](#preordertraversaltree)
+  - [PreOrderTraversal(tree)](#preordertraversaltree)
 
 ## InOrderTraversal(tree)
 ```

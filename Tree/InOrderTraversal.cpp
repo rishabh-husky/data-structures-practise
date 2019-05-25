@@ -29,7 +29,7 @@ bool InOrderTraversal::walk(node * node)
 
 bool InOrderTraversal::traverse()
 {
- 	if(t.root!=nullptr)
+ 	if (t.root != nullptr)
 	{
 		walk(t.root);
 	}

@@ -2,6 +2,7 @@
 #include "Tree.h"
 #include "InOrderTraversal.h"
 #include "PreOrderTraversal.h"
+#include "PostOrderTraversal.h"
 #include <iostream>
 
 int main()
@@ -39,6 +40,12 @@ int main()
 	PreOrderTraversal preOrder(newtree);
 	
 	preOrder.traverse();
+
+	cout << "Post Order Traversal" << endl;
+
+	PostOrderTraversal postOrder(newtree);
+
+	postOrder.traverse();
 
 	return 0;
 }

@@ -6,6 +6,7 @@ Traverse one sub-tree before exploring a sibling subtree.
  
   - [InOrderTraversal(tree)](#inordertraversaltree)
   - [PreOrderTraversal(tree)](#preordertraversaltree)
+  - [PostOrderTraversal(tree)](#postordertraversaltree)
 
 ## InOrderTraversal(tree)
 ```
@@ -28,6 +29,20 @@ InOrderTraversal(tree.right)
 Print(tree.key)
 PreOrderTraversal(tree.left)
 PreOrderTraversal(tree.right)
+ ```
+
+ ### Running Time
+
+ > O(n): n
+
+
+ ## PostOrderTraversal(tree)
+ ```
+ if tree = nil:
+	return
+PostOrderTraversal(tree.left)
+PostOrderTraversal(tree.right)
+Print(tree.key)
  ```
 
  ### Running Time

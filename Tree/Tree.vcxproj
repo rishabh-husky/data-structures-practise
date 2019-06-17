@@ -120,12 +120,14 @@
   <ItemGroup>
     <ClInclude Include="DataTypes.h" />
     <ClInclude Include="InOrderTraversal.h" />
+    <ClInclude Include="PostOrderTraversal.h" />
     <ClInclude Include="PreOrderTraversal.h" />
     <ClInclude Include="Tree.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="InOrderTraversal.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="PostOrderTraversal.cpp" />
     <ClCompile Include="PreOrderTraversal.cpp" />
     <ClCompile Include="Tree.cpp" />
   </ItemGroup>

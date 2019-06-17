@@ -7,6 +7,12 @@ Traverse one sub-tree before exploring a sibling subtree.
   - [InOrderTraversal(tree)](#inordertraversaltree)
   - [PreOrderTraversal(tree)](#preordertraversaltree)
   - [PostOrderTraversal(tree)](#postordertraversaltree)
+ 
+### BreadthFirst Search
+
+Traverse all nodes at one level before progressing to next level.
+
+  - [LevelTraversal(tree)](#leveltraversetree)
 
 ## InOrderTraversal(tree)
 ```
@@ -22,7 +28,7 @@ InOrderTraversal(tree.right)
 > O(n): n
 
 
- ## PreOrderTraversal(tree)
+## PreOrderTraversal(tree)
  ```
  if tree = nil:
 	return
@@ -31,12 +37,12 @@ PreOrderTraversal(tree.left)
 PreOrderTraversal(tree.right)
  ```
 
- ### Running Time
+### Running Time
 
- > O(n): n
+> O(n): n
 
 
- ## PostOrderTraversal(tree)
+## PostOrderTraversal(tree)
  ```
  if tree = nil:
 	return
@@ -45,6 +51,6 @@ PostOrderTraversal(tree.right)
 Print(tree.key)
  ```
 
- ### Running Time
+### Running Time
 
- > O(n): n
+> O(n): n

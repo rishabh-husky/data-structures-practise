@@ -12,7 +12,7 @@ Traverse one sub-tree before exploring a sibling subtree.
 
 Traverse all nodes at one level before progressing to next level.
 
-  - [LevelTraversal(tree)](#leveltraversetree)
+  - [LevelTraversal(tree)](#leveltraversaltree)
 
 ## InOrderTraversal(tree)
 ```

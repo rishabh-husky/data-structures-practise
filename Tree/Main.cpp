@@ -1,9 +1,11 @@
+#include <iostream>
 #include "DataTypes.h"
+#include "Queue.h"
 #include "Tree.h"
 #include "InOrderTraversal.h"
 #include "PreOrderTraversal.h"
 #include "PostOrderTraversal.h"
-#include <iostream>
+#include "LevelTraversal.h"
 
 int main()
 {
@@ -46,6 +48,10 @@ int main()
 	PostOrderTraversal postOrder(newtree);
 
 	postOrder.traverse();
+
+	LevelTraversal newLevelTraversal(newtree);
+
+	newLevelTraversal.traverse();
 
 	return 0;
 }

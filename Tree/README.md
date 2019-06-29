@@ -54,3 +54,23 @@ Print(tree.key)
 ### Running Time
 
 > O(n): n
+
+## LevelTraversal(tree)
+ ```
+ if tree = nil:
+	return
+Queue q
+q.enqueue(tree)
+while not q.Empty()
+	node <- q.dequeue()
+	Print(node.key)
+	if node.left != nil:
+		q.enqueue(node.left)
+	if node.right != nil:
+		q.enqueue(node.right)
+ ```
+
+### Running Time
+
+> O(n): 
+

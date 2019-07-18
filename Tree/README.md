@@ -72,5 +72,5 @@ while not q.Empty()
 
 ### Running Time
 
-> O(n): 
+> O(n): n
 

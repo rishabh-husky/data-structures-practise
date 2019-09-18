@@ -2,11 +2,11 @@
 
 Abstract datatype with the following operation:
  
-  - [Get(i)](#inordertraversaltree)
-  - [Set(i, val)](#preordertraversaltree)
-  - [PushBack(val)](#postordertraversaltree)
-  - [Remove(i)]
-  - [Size()]
+  - [Get(i)](#geti)
+  - [Set(i, val)](#seti-val)
+  - [PushBack(val)](#pushbackval)
+  - [Remove(i)](#removei)
+  - [Size()](#size)
 
 ## Get(i)
 ```

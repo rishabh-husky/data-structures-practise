@@ -51,7 +51,6 @@ size <- size + 1
 ```
 if i < 0 OR i >= size:
 	ERROR: index out of bounds
-arr[i] = val;
 for j from i to size - 2:
 	arr[j] <- arr[j+1]
 size <- size +1
@@ -59,7 +58,7 @@ size <- size +1
 
 ### Running Time
 
-> O(n): 1
+> O(n): n
 
 ## Size()
 ```

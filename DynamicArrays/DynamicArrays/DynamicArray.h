@@ -1,5 +1,9 @@
 #pragma once
 #include <stdlib.h>
+#include <iostream>
+#include <sstream>
+
+using namespace std;
 
 class DynamicArray
 {
@@ -32,6 +36,8 @@ public:
 
 	void remove(int);
 
-	int size() const;
+	int size();
+
+	string toString();
 };
 

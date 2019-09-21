@@ -91,7 +91,29 @@ void DynamicArray::remove(int i)
 	arrSize--;
 }
 
-int DynamicArray::size() const
+int DynamicArray::size()
 {
 	return arrSize;
+}
+
+string DynamicArray::toString() 
+{
+	string arrStr = "[";
+	ostringstream oss;
+	
+	for (int i = 0; i < arrSize; i++) {
+		oss << DArr[i];
+		arrStr.append(oss.str());
+		oss.str("");
+		if (i < arrSize - 1) {
+			arrStr.append(",");
+		}
+	}
+
+	arrStr.append("]");
+	arrStr.append(" size: ");
+	oss << size();
+	arrStr.append(oss.str());
+
+	return arrStr;
 }

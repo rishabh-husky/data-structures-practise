@@ -3,7 +3,7 @@
 Abstract datatype with the following operations at minimum:
  
   - [Insert(val)](#insertval)
-  - [ExtractMax()](#popfrontval)
+  - [ExtractMax()](#extractmax)
 
 Implementation using sorted doubly linked list
 

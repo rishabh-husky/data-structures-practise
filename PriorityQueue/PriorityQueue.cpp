@@ -18,6 +18,7 @@ struct node * PriorityQueue::createNode(int key) {
 
 int PriorityQueue::extractMax() {
 	int val {NULL};
+	struct node* lastNode = nullptr;
 
 	if (head == nullptr) {
 		throw PriorityQueue::EMPTY_LIST_EXCEPTION;
@@ -28,7 +29,7 @@ int PriorityQueue::extractMax() {
 		tail = nullptr;
 	} else {
 		val = tail->key;
-		struct node* lastNode = tail;
+		lastNode = tail;
 		tail = tail->prev;
 		tail->next = nullptr;
 		free(lastNode);
@@ -61,6 +62,7 @@ void PriorityQueue::insert(int key) {
 		}
 		newnode->next = current->next;
 		newnode->prev = current;
+		current->next->prev = newnode;
 		current->next = newnode;
 	}
 }

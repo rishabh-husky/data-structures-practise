@@ -1,6 +1,6 @@
 # Queue
 
-Queue is a LIFO (Last In First Out).
+Queue is a FIFO (First In First Out).
 
 ### Queue api Implementation using linked list  
 

@@ -43,7 +43,7 @@ return key
 ```
 
 ### Running Time
-> O(n): n
+> O(n): 1
 
 
 ## Boolean Empty()

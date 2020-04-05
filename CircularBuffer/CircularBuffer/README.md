@@ -8,7 +8,7 @@ Circular Buffer implementation:
 
 ### Circular Buffer api Implementation using linked list  
 
-- [pushToBuffer(Key)](#addtobuffer)
+- [pushToBuffer(Key)](#pushtobufferkey)
 add key at rear to buffer
 
 - [Key popFromBuffer()](#key-removefrombuffer)

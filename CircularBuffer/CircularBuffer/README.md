@@ -3,7 +3,7 @@
 Circular Buffer is a FIFO (First In First Out).
 Circular Buffer implementation:
 * Collection is made of array of integers.
-* Throwing error if buffer is full.
+* Error is thrown  if buffer is full.
 * Front, Rear, Current keys are maintained.(default value -1 when buffer is empty)
 
 ### Circular Buffer api Implementation using linked list  

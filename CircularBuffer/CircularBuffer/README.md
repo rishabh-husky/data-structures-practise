@@ -11,7 +11,7 @@ Circular Buffer implementation:
 - [pushToBuffer(Key)](#pushtobufferkey)
 add key at rear to buffer
 
-- [Key popFromBuffer()](#key-removefrombuffer)
+- [Key popFromBuffer()](#key-popfrombuffer)
 removes and returns front value from buffer
 
 ## pushToBuffer(key)

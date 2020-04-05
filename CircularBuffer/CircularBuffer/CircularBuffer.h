@@ -8,11 +8,13 @@ class CircularBuffer
 private:
 	static const int BUFFER_CAPACITY = 5;
 	int front;
-	int current;
+	int rear;
 	int collection[CircularBuffer::BUFFER_CAPACITY] = {NULL};
+	int nextIndex(int);
+	int current;
 public:
-	const int BUFFER_FULL = 1;
-	const int POP_BUFFER_EMPTY = 2;
+	static const int BUFFER_FULL = 1;
+	static const int POP_BUFFER_EMPTY = 2;
 	CircularBuffer();
 	void pushToBuffer(int);
 	int popFromBuffer();

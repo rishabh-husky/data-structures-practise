@@ -2,15 +2,6 @@
 #include "Hash.h"
 #include <math.h>
 
-struct HashNode* Hash::createHashList() {
-	struct HashNode* newNode;
-	newNode = (struct HashNode*) malloc(sizeof(struct HashNode) * n);
-	if (newNode == NULL) {
-		throw OUT_OF_MEMORY_EXCEPTION;
-	}
-	return newNode;
-}
-
 
 struct ElementNode* Hash::createElementNode(int num) {
 	struct ElementNode* newNode;
@@ -21,6 +12,11 @@ struct ElementNode* Hash::createElementNode(int num) {
 	newNode->value = num;
 	newNode->next = nullptr;
 	return newNode;
+}
+
+Hash::Hash(int Length) {
+	n = 10 ^ Length;
+	m = ceil(n * 0.8);
 }
 
 bool Hash::pushToPosition(struct HashNode* hashLocation, int num) {
@@ -40,8 +36,17 @@ bool Hash::pushToPosition(struct HashNode* hashLocation, int num) {
 	}
 }
 
-int Hash::valueToHash(int num) {
-	return num;
+
+
+struct HashNode* Hash::createHashList() {
+	struct HashNode* newNode;
+	newNode = (struct HashNode*)malloc(sizeof(struct HashNode) * n);
+	if (newNode == NULL) {
+		throw OUT_OF_MEMORY_EXCEPTION;
+	}
+	newNode->firstElement = nullptr;
+	newNode->next = nullptr;
+	return newNode;
 }
 
 bool Hash::addToHashList(int hash, int num) {
@@ -49,16 +54,16 @@ bool Hash::addToHashList(int hash, int num) {
 		if (start == nullptr) {
 			start = createHashList();
 		}
-		pushToPosition(start+hash, num);
+		pushToPosition(start + hash, num);
 		return true;
-	} catch (int e) {
+	}
+	catch (int e) {
 		throw e;
 	}
 }
 
-Hash::Hash(int Length) {
-	n = 10^Length;
-	m = ceil(n * 0.8);
+int Hash::valueToHash(int num) {
+	return num;
 }
 
 bool Hash::add(int num) {

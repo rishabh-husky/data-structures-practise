@@ -30,9 +30,9 @@ n is number of values
 ## Rehash
 if α < 0.5 OR α > 1
 	m <- ceil (0.9 * n)
-
-## Key hash(value)
 ```
+### Key hash(value)
+
 if α < 0.5 OR α > 1
 	Rehash()
 p = random (m , prime number greater than m)
@@ -85,3 +85,4 @@ return false
 ### Running Time
 
 > O(n): 1 + α
+```
